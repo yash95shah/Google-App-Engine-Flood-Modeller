@@ -1,0 +1,6 @@
+cron:
+- description: "Synchronous jobs"
+  url: 'job path'
+  schedule: every 1 mins
+  retry_parameters:
+    min_backoff_seconds: 3e
