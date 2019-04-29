@@ -1,0 +1,1 @@
+{"_id":"5cc63f4cfa393eac7830e01e","model_type":"hurricane","input_dsars":["5cc63f388af037deeb34a90b"],"output_dsir":null,"upstream_jobs":[],"downstream_jobs":[],"variables":{"wind_speed":49.95,"humidity":0.34},"weights":[],"relevance":0.7527}

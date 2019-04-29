@@ -1,6 +1,11 @@
 cron:
-- description: "Synchronous jobs"
-  url: 'job path'
-  schedule: every 1 mins
+- description: "Synchronous job-getter JSON1"
+  url: /task/sc1
+  schedule: every 1 minutes
   retry_parameters:
-    min_backoff_seconds: 3e
+    min_backoff_seconds: 3
+- description: "Synchronous job-getter JSON2"
+  url: /task/sc2
+  schedule: every 1 minutes
+  retry_parameters:
+    min_backoff_seconds: 3
