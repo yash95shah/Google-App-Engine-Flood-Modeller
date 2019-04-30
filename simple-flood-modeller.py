@@ -30,14 +30,16 @@ def inject_into_datastore(data, name=None):
     dsagent.put(j_entity)
     return 'Job finished'
 
+
 def query_fetch(kind):
-    print ("Entered into it")
+    print("Entered into it")
     if kind is None:
         return
     query = client.query(kind=kind)
     first_key = client.key(kind, 'context')
     query.key_filter(first_key, '=')
     return (list(query.fetch())[0].items())
+
 
 @app.route('/task/sc1')
 def script1():
@@ -51,7 +53,8 @@ def script2():
 #     stepper = pow(10.0, digits)
 #     return math.trunc(stepper * number) / stepper
 
-@app.route('/test') 
+
+@app.route('/test')
 def test():
     return 'String Test'
 
@@ -70,10 +73,10 @@ def main():
     #     else:
     #         subprocess.check_output(command, shell=False)
     # except subprocess.CalledProcessError as cpe:
-        # log("JobGateway returned exit code 1 on 'fetch_job'")
-        # with open("/home/cc/error_log.txt", "w") as errorlog:
-        #     errorlog.write(json.dumps(str(cpe)))
-        # return  # no job fetched
+    # log("JobGateway returned exit code 1 on 'fetch_job'")
+    # with open("/home/cc/error_log.txt", "w") as errorlog:
+    #     errorlog.write(json.dumps(str(cpe)))
+    # return  # no job fetched
     # log("JobGateway fetched")
 
     # create an spatiotemporal index scaffolding for the current context
