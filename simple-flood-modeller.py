@@ -30,6 +30,14 @@ def inject_into_datastore(data, name=None):
     dsagent.put(j_entity)
     return 'Job finished'
 
+def query_fetch(kind):
+    print ("Entered into it")
+    if kind is None:
+        return
+    query = client.query(kind=kind)
+    first_key = client.key(kind, 'context')
+    query.key_filter(first_key, '=')
+    return (list(query.fetch())[0].items())
 
 @app.route('/task/sc1')
 def script1():
